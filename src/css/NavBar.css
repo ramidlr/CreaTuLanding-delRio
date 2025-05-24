@@ -1,0 +1,31 @@
+.nav__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3rem 1rem;
+    background-color: white;
+}
+
+.navbar--icon {
+    height: 2.5rem;
+    object-fit: contain;
+}
+
+.shopping-cart-icon {
+    height: 1.8rem;
+    object-fit: contain;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    text-decoration: inherit;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+    transition: color 0.4s ease;
+    background-color: rgba(24, 231, 179, 0.303);
+    transform: translateY(-30%) rotate(-2deg);
+}
