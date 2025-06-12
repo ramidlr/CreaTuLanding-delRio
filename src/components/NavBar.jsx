@@ -1,29 +1,24 @@
 import "../css/NavBar.css";
 import CartWidget from "./CartWidget";
+import { NavLink } from 'react-router-dom'
+
 
 const NavBar = () => {
 return (
     <nav className="nav__wrapper">
-        <a href="#">
+        <NavLink to="/">
             <img className="navbar--icon" src="/oana--logo.png" alt="Oana Store Logo" />
-        </a>
+        </NavLink>
 
-        <a href="#" className="nav-link">
+        <NavLink className="nav-link" to="/category/Nuevo">
         New
-        </a>
-        <a href="#" className="nav-link">
-        Deporte
-        </a>
-        <a href="#" className="nav-link">
-        Hombre
-        </a>
-        <a href="#" className="nav-link">
-        Mujer
-        </a>
-        <a href="#" className="nav-link">
-        SALE
-        </a>
-
+        </NavLink>
+        <NavLink href="#" className="nav-link" to="/category/Hombre">
+        Men
+        </NavLink>
+        <NavLink href="#" className="nav-link" to="/category/Mujer">
+        Women
+        </NavLink>
         <CartWidget />
     </nav>
     );
