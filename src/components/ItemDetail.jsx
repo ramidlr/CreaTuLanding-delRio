@@ -1,4 +1,6 @@
 import ItemCount from './ItemCount'
+import '../css/ItemDetail.css'
+
 const ItemDetail = ({detail}) => {
 
   const onAdd = (cantidad)=>{
@@ -6,7 +8,7 @@ const ItemDetail = ({detail}) => {
   }
 
   return (
-    <div style={{padding:'2rem', display:'flex', flexDirection:'column', alignItems:'center'}}>
+    <div className='product__information'>
         <h2>Detalle del producto: {detail.name}</h2>
         <img src={detail.img} alt={detail.name}/>
         <p>{detail.description}</p>
