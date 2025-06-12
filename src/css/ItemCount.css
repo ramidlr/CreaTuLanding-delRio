@@ -1,0 +1,37 @@
+.counter__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button {
+        font-size: 1rem;
+        border-radius: 2rem;
+    }
+}
+
+.counter__actions {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    margin: 1rem
+}
+
+.button__subtract {
+    background-color: rosybrown;
+    color: black;
+}
+
+.button__add {
+    background-color: lightgreen;
+    color: black;
+}
+
+.button__buy {
+    background-color: black;
+    color: white;
+}
+
+.total__count {
+    font-size: 1rem;
+    font-weight: bold;
+}
