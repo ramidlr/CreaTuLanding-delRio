@@ -27,10 +27,7 @@ const CartView = () => {
                             <div className="d-flex justify-content-center gap-2 mt-3">
                                 <button className="btn btn-danger" onClick={() => removeItem(compra.id)}>Eliminar</button>
                             </div>
-                        </div>
-
-                        //total a pagar
-                        
+                        </div>                        
                     ))
                 }
             </div>
