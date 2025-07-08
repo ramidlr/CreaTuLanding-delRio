@@ -2,15 +2,16 @@ import { useEffect, useState } from "react"
 import { getProducts } from "../mock/AsyncMock"
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom"
-import "../css/ItemListContainer.css";
-
+import "../css/ItemListContainer.css"
+import LoaderComponent from "./LoaderComponent"
 
 const ItemListContainer = (props) => {
     const[data, setData]= useState([])
-    const {categoryId} = useParams()
+    const[loading, setLoading]= useState(false)
+    const {categoryId} = useParams();
 
-    console.log(categoryId)
     useEffect(()=>{
+        setLoading(true);
         getProducts()
         .then((respuesta)=> {
             if(categoryId){
@@ -20,12 +21,13 @@ const ItemListContainer = (props) => {
             }
         })
         .catch((error)=> console.log(error))
+        .finally(() => setLoading(false))
     },[categoryId])
 
 return(
     <div className="main__wrapper">
-        <h1 className="banner__title">{props.greetings}</h1>
-        <ItemList data={data}/>
+        <h1 className="banner__title mb-5">{props.greetings}</h1>
+        {loading ? <LoaderComponent/> : <ItemList data={data}/>}
     </div>
 )
 }

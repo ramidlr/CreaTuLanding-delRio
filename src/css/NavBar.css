@@ -6,6 +6,11 @@
     background-color: white;
 }
 
+.nav__links {
+    display: flex;
+    column-gap: 2rem;
+}
+
 .navbar--icon {
     height: 2.5rem;
     object-fit: contain;
@@ -28,4 +33,11 @@
     transition: color 0.4s ease;
     background-color: rgba(24, 231, 179, 0.303);
     transform: translateY(-30%) rotate(-2deg);
+}
+
+@media all and (max-width: 750px) {
+    .nav__wrapper {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
 }
