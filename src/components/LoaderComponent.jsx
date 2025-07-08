@@ -5,7 +5,7 @@ const LoaderComponent = () => {
     return (
         <div className='loader__wrapper'>   
             <Spinner animation="grow" variant="primary" role="status">
-                <span className="visually-hidden">Loading...</span>
+                <span className="visually-hidden">Cargando...</span>
             </Spinner>
         </div>
     )

@@ -4,3 +4,9 @@
     flex-direction: column;
     align-items: center;
 }
+
+.product__information .product-img {
+    max-height: 500px;
+    width: 100%;
+    object-fit: contain;
+}

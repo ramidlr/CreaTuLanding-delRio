@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 const CartWidget = () => {
     return (
-        <a href="#">
+        <Link to="/cart">
             <img className="shopping-cart-icon" src="/shopcart.png"></img>
-        </a>
+        </Link>
     )
 }
 
