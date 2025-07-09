@@ -4,9 +4,9 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 const CartView = () => {
-    const {cart, deleteCart, removeItem} = useContext(CartContext);
+    const { cart, deleteCart, removeItem, finalPrice } = useContext(CartContext);
     return (
-        <div className="d-flex flex-column justify-content-center align-items-center text-center min-vh-100">
+        <div className="d-flex flex-column align-items-center text-center min-vh-100">
             <h2 className="fw-bold mb-4">Ya casi has finalizado tu compra</h2>
             
             <div>
@@ -22,20 +22,18 @@ const CartView = () => {
                             <h5 className="fw-bold">{compra.name}</h5>
                             <p>Precio unitario: ${compra.price},00</p>
                             <p>Cantidad: {compra.quantity}</p>
-                            <p className="fw-bold">Total: ${compra.price * compra.quantity},00</p>
-
                             <div className="d-flex justify-content-center gap-2 mt-3">
-                                <button className="btn btn-danger" onClick={() => removeItem(compra.id)}>Eliminar</button>
+                                <button className="btn btn-warning" onClick={() => removeItem(compra.id)}>Eliminar</button>
                             </div>
                         </div>                        
                     ))
                 }
             </div>
 
-            <span>Total a pagar</span>
-            <div className='text-center p-4 border rounded mb-4'>
-                {/* <button className="btn btn-success" onClick={() => deleteCart()}>Vaciar carrito</button> */}
-                <button className="btn btn-warning" onClick={deleteCart}>Vaciar carrito</button>
+            <span className="fw-bold">Total a pagar: ${finalPrice()}</span>
+            <div className='text-center p-3 border rounded mb-4 mt-4'>
+                <Link className="btn btn-success me-2" to="/checkout">Terminar compra</Link>
+                <button className="btn btn-danger" onClick={deleteCart}>Vaciar carrito</button>
             </div>
         </div>
     );

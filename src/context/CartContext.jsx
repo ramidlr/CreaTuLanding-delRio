@@ -6,19 +6,18 @@ export const CartProvider = ({children}) => {
     const [cart, setCart] = useState([]);
 
 // funcion para agregar un item, o sumar cantidad si ya existe.
-    const addItemToCart = (item, quantity) => {
-        if(isInCart(item.id)){
-            const newCart = cart.map(prod => {
-                if(item.id === prod.id){
-                    return {...prod, quantity: prod.quantity + quantity}
+    const addItemToCart = (item, cantidad) => {
+        if (isInCart(item.id)) {
+            const newCart = cart.map((prod) => {
+                if (item.id === prod.id) {
+                    return { ...prod, quantity: prod.quantity + cantidad }
                 } else {
-                    return prod;
+                    return prod
                 }
             })
-            setCart(newCart);
-        } 
-        else {
-            setCart([...cart, {...item, quantity}]);
+            setCart(newCart)
+        } else {
+            setCart([...cart, { ...item, quantity: cantidad }])
         }
     }
 
@@ -38,10 +37,17 @@ export const CartProvider = ({children}) => {
     }
     
 // funcion para sumar cantidad total de items
-// funcion para sumar total a pagar
+    const cartQuantity = () => {
+        return cart.reduce((acc, prod) => acc += prod.quantity, 0)
+    }
+
+    // funcion para sumar total a pagar
+    const finalPrice = () => {
+        return cart.reduce((acc, product) => acc += product.price * product.quantity, 0);
+    }
 
     return (
-        <CartContext.Provider value={{cart, addItemToCart, removeItem, deleteCart, isInCart}}>
+        <CartContext.Provider value={{cart, addItemToCart, removeItem, deleteCart, isInCart, cartQuantity, finalPrice}}>
             {children}
         </CartContext.Provider>
     )
