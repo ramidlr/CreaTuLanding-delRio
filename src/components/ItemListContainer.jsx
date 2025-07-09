@@ -38,7 +38,7 @@ const ItemListContainer = (props) => {
     return (
         <>
             <div className="main__wrapper">
-                <h1 className="banner__title mb-5">{props.greetings}</h1>
+                <h1 className="banner__title mt-5 mb-5">{props.greetings}</h1>
                 {loading ? <LoaderComponent /> : <ItemList data={data} />}
             </div>
         

@@ -5,30 +5,32 @@ import "../css/Item.css";
 const Item = ({ prod }) => {
   const { name, price, img, id } = prod;
   return (
-    <Card className="item-card h-100 shadow-sm">
-      <div className="item-card__img-wrapper">
-        <Card.Img
-          variant="top"
-          src={img}
-          alt={name}
-          className="item-card__img"
-        />
-      </div>
-      <Card.Body className="d-flex flex-column justify-content-between">
-        <div>
-          <Card.Title className="item-card__title">{name}</Card.Title>
-          <Card.Text className="item-card__price mb-2">${price},00</Card.Text>
+    <Link to={`/item/${id}`} className="item-card-link">
+      <Card className="item-card h-100 shadow">
+        <div className="item-card__img-wrapper">
+          <Card.Img
+            variant="top"
+            src={img}
+            alt={name}
+            className="item-card__img"
+          />
         </div>
-        <Button
-          as={Link}
-          to={`/item/${id}`}
-          variant="primary"
-          className="mt-auto item-card__btn"
-        >
-          Ver más
-        </Button>
-      </Card.Body>
-    </Card>
+        <Card.Body className="d-flex flex-column justify-content-between">
+          <div>
+            <Card.Title className="item-card__title">{name}</Card.Title>
+            <Card.Text className="item-card__price mb-2">${price},00</Card.Text>
+          </div>
+          <Button
+            as={Link}
+            to={`/item/${id}`}
+            variant="primary"
+            className="mt-auto item-card__btn"
+          >
+            Ver más
+          </Button>
+        </Card.Body>
+        </Card>
+      </Link>
   );
 };
 

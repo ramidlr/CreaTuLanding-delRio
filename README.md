@@ -1,12 +1,61 @@
-# React + Vite
+# OANA ProyectoFinal-delRio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+_Ecommerce desarrollado en ReactJs y Vite, desplegado en Vercel._
 
-Currently, two official plugins are available:
+## Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este proyecto fue creado como entrega final para el curso de **React Js** en Coderhouse.
 
-## Expanding the ESLint configuration
+**Funcionalidades principales:**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Home:** Página principal de bienvenida.
+- **Lista de productos:** Visualización de todos los productos disponibles.
+- **Detalle de producto:** Información detallada de cada producto.
+- **Carrito:** Agrega, elimina y visualiza productos seleccionados.
+- **Checkout:** Formulario para completar la compra y registrar la orden.
+- **Manejo de rutas inválidas:** Si se accede a una ruta inexistente, se muestran mensajes de error y botones para regresar.
+
+
+## Instalación
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/ramidlr/ProyectoFinal-delRio.git
+   ```
+2. Entra a la carpeta del proyecto:
+   ```bash
+   cd ProyectoFinal-delRio
+   ```
+3. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+4. Ejecuta el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+## Versión online
+
+Si deseas ver el proyecto funcionando en línea, puedes acceder al siguiente enlace:
+
+**[Ver OANA ProyectoFinal-delRio en Vercel](LINK_AQUI)**
+
+## Librerías utilizadas
+
+- **React Bootstrap**
+  - Para botones, márgenes y layouts, optimizando el código y reduciendo la necesidad de archivos CSS adicionales.
+[React Bootstrap](https://www.linkedin.com/)
+
+- **Firebase**
+  - Base de datos en la nube para almacenar productos y órdenes de compra.
+[Firebase](https://firebase.google.com/)
+
+- **React Router DOM**
+  - Navegación por rutas sin recargar la página.
+[React Router Dom](https://reactrouter.com/)
+
+## Desarrollado por
+
+**Ramiro del Rio**  
+[https://github.com/ramidlr](https://github.com/ramidlr)
