@@ -36,10 +36,14 @@ const ItemListContainer = (props) => {
     }, [categoryId])
 
     return (
-        <div className="main__wrapper">
-            <h1 className="banner__title mb-5">{props.greetings}</h1>
-            {loading ? <LoaderComponent /> : <ItemList data={data} />}
-        </div>
+        <>
+            <div className="main__wrapper">
+                <h1 className="banner__title mb-5">{props.greetings}</h1>
+                {loading ? <LoaderComponent /> : <ItemList data={data} />}
+            </div>
+        
+        </>
+    
     )
 }
 
