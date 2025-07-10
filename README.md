@@ -39,7 +39,7 @@ Este proyecto fue creado como entrega final para el curso de **React Js** en Cod
 
 Si deseas ver el proyecto funcionando en línea, puedes acceder al siguiente enlace:
 
-**[Ver OANA ProyectoFinal-delRio en Vercel](LINK_AQUI)**
+**[Ver OANA ProyectoFinal-delRio en Vercel](https://proyecto-final-del-rio.vercel.app/)**
 
 ## Librerías utilizadas
 
