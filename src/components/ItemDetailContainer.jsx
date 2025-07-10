@@ -3,7 +3,7 @@ import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import LoaderComponent from "./LoaderComponent";
 import { doc, getDoc } from "firebase/firestore";
-import { db } from "../service/Firebase";
+import { db } from "../service/firebase";
 import { Link } from "react-router-dom";
 
 

@@ -2,7 +2,7 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
-import { db } from "../service/Firebase";
+import { db } from "../service/firebase";
 import { useForm } from "react-hook-form";
 
 const Checkout = () => {
