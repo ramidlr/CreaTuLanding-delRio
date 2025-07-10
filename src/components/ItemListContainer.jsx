@@ -10,7 +10,7 @@ const ItemListContainer = (props) => {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
     const { categoryId } = useParams();
-
+    
     //FIRESTORE
 
     useEffect(() => {
