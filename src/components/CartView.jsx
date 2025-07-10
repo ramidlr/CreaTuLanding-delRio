@@ -7,7 +7,7 @@ const CartView = () => {
     const { cart, deleteCart, removeItem, finalPrice } = useContext(CartContext);
     return (
         <div className="d-flex flex-column align-items-center text-center min-vh-100">
-            <h2 className="fw-bold mb-4">Ya casi has finalizado tu compra</h2>
+            <h2 className="fw-bold mt-4 mb-4">Ya casi has finalizado tu compra</h2>
             
             <div>
                 {

@@ -26,11 +26,6 @@
     color: black;
 }
 
-.button__buy {
-    background-color: black;
-    color: white;
-}
-
 .total__count {
     font-size: 1rem;
     font-weight: bold;

@@ -31,8 +31,8 @@ const ItemCount = ({ stock, onAdd }) => {
         </button>
       </div>
       <button
-        className="button__buy"
-        disabled={stock === 0}
+        className="btn btn-dark"
+        disabled={stock === 0 || count === 0}
         onClick={comprar}
       >
         Comprar

@@ -5,7 +5,6 @@ import "../css/Item.css";
 const Item = ({ prod }) => {
   const { name, price, img, id } = prod;
   return (
-    <Link to={`/item/${id}`} className="item-card-link">
       <Card className="item-card h-100 shadow">
         <div className="item-card__img-wrapper">
           <Card.Img
@@ -30,7 +29,6 @@ const Item = ({ prod }) => {
           </Button>
         </Card.Body>
         </Card>
-      </Link>
   );
 };
 
